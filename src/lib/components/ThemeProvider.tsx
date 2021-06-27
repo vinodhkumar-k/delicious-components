@@ -90,9 +90,87 @@ fontSizes.lg = fontSizes[2];
 fontSizes.xl = fontSizes[3];
 fontSizes.xxl = fontSizes[4];
 
+const lineHeights = ['24px', '27px', '34px', '41px', '54px'];
+lineHeights.sm = lineHeights[0];
+lineHeights.md = lineHeights[1];
+lineHeights.lg = lineHeights[2];
+lineHeights.xl = lineHeights[3];
+lineHeights.xxl = lineHeights[4];
+
+const fontWeights: any = [400, 600];
+fontWeights.regular = fontWeights[0];
+fontWeights.bold = fontWeights[1];
+
+const space: any = [0, 4, 8, 16, 24, 32, 40, 56];
+space.xxs = space[1];
+space.xs = space[2];
+space.sm = space[3];
+space.md = space[4];
+space.lg = space[5];
+space.xl = space[6];
+space.xxl = space[7];
+
+const radii: any = [2, 4, 8];
+radii.sm = radii[0];
+radii.md = radii[1];
+radii.lg = radii[2];
+
+const shadows = [
+  '0 1px 3px 0 rgba(0, 0, 0, 0.1)',
+  '0 2px 4px 0 rgba(0, 0, 0, 0.15)',
+  '0 3px 8px 0 rgba(0, 0, 0, 0.15)',
+  '0 6px 12px 0 rgba(0, 0, 0, 0.10)',
+];
+shadows.sm = shadows[0];
+shadows.md = shadows[1];
+shadows.lg = shadows[2];
+shadows.xl = shadows[3];
+
+const borderWidths = ['1px', '2px'];
+borderWidths.sm = borderWidths[0];
+borderWidths.md = borderWidths[1];
 
 export const theme = {
-  grid: {}
+  borderWidths,
+  color: {
+    ...palette,
+    border: palette.neutral_400,
+    background: palette.neutral_200,
+    text: palette.neutral_800,
+    black: palette.neutral_800,
+    white: palette.neutral_100,
+  },
+  fonts,
+  fontSizes,
+  fontWeights,
+  lineHeights,
+  shadows,
+  space,
+  radii,
+  mediaQueries,
+  breakpoints: BREAKPOINTS_SCALE,
+  // https://github.com/dragma/styled-bootstrap-grid#styled-bootstrap-grid
+  grid: {
+    /**
+     * This version of styled-bootstrap-grid requires breakpoint
+     * values to be integers (not px literals)
+     */
+     breakpoints: rawBreakpoints,
+     container: {
+      /*padding: {
+        xl: 32,
+        lg: 32,
+        md: 16,
+        sm: 16,
+      },*/
+      maxWidth: {
+        xl: 1144,
+        lg: 960,
+        // md: '100%',
+        // sm: '100%',
+      },
+     }
+  }
 };
 
 const ThemeProvider: FC<any> = ({ children }) => (
