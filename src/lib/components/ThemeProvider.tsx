@@ -157,17 +157,12 @@ export const theme = {
      */
      breakpoints: rawBreakpoints,
      container: {
-      /*padding: {
-        xl: 32,
-        lg: 32,
-        md: 16,
-        sm: 16,
-      },*/
+      padding: 32,
       maxWidth: {
         xl: 1144,
         lg: 960,
-        // md: '100%',
-        // sm: '100%',
+        md: 720,
+        sm: 540
       },
      }
   }
