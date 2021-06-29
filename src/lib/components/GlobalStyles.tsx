@@ -1,7 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 import css from '@styled-system/css';
+import { media } from 'styled-bootstrap-grid';
 
-const GlobalStyles = createGlobalStyle`
+const GlobalStyles = createGlobalStyle<any>`
   body {
     ${css({
       margin: 0,
@@ -67,6 +68,42 @@ const GlobalStyles = createGlobalStyle`
     })}
   }
 
+  ${media.md`
+    body {
+      ${`css({
+        fontSize: 'md',
+        lineHeight: 'md',
+      })`}
+    }
+
+    h1 {
+      ${`css({
+        fontSize: 'xxl',
+        lineHeight: 'xxl',
+      })`}
+    }
+
+    h2 {
+      ${`css({
+        fontSize: 'xl',
+        lineHeight: 'xl',
+      })`}
+    }
+
+    h3 {
+      ${`css({
+        fontSize: 'lg',
+        lineHeight: 'lg',
+      })`}
+    }
+
+    h4 {
+      ${`css({
+        fontSize: 'md',
+        lineHeight: 'md',
+      })`}
+    }
+  `}
 `;
 
 export default GlobalStyles;
