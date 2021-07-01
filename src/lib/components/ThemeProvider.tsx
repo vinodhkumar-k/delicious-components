@@ -76,7 +76,7 @@ const breakpoints = {
    xl: `@media screen and (min-width: ${breakpoints.xl})`,
  };
 
- const fonts = [
+ const fonts: any = [
   'Montserrat, Verdana, Geneva, sans-serif',
   "'Source Sans Pro', 'Trebuchet MS', Helvetica, sans-serif",
 ];
@@ -90,7 +90,7 @@ fontSizes.lg = fontSizes[2];
 fontSizes.xl = fontSizes[3];
 fontSizes.xxl = fontSizes[4];
 
-const lineHeights = ['24px', '27px', '34px', '41px', '54px'];
+const lineHeights: any = ['24px', '27px', '34px', '41px', '54px'];
 lineHeights.sm = lineHeights[0];
 lineHeights.md = lineHeights[1];
 lineHeights.lg = lineHeights[2];
@@ -115,7 +115,7 @@ radii.sm = radii[0];
 radii.md = radii[1];
 radii.lg = radii[2];
 
-const shadows = [
+const shadows: any = [
   '0 1px 3px 0 rgba(0, 0, 0, 0.1)',
   '0 2px 4px 0 rgba(0, 0, 0, 0.15)',
   '0 3px 8px 0 rgba(0, 0, 0, 0.15)',
@@ -126,7 +126,7 @@ shadows.md = shadows[1];
 shadows.lg = shadows[2];
 shadows.xl = shadows[3];
 
-const borderWidths = ['1px', '2px'];
+const borderWidths: any = ['1px', '2px'];
 borderWidths.sm = borderWidths[0];
 borderWidths.md = borderWidths[1];
 
