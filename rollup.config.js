@@ -8,7 +8,7 @@ import pkg from "./package.json";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  input: "src/index.tsx",
+  input: "src/lib/index.tsx",
   output: [
     {
       file: pkg.main,
