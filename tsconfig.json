@@ -7,7 +7,6 @@
       "esnext"
     ],
     "outDir": "build",
-    "sourceMap": true,
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -20,7 +19,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": false,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "declaration": true
   },
   "include": [
     "src"
