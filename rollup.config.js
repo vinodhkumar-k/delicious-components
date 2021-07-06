@@ -8,19 +8,17 @@ import pkg from "./package.json";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  input: "src/lib/index.tsx",
+  input: "src/index.tsx",
   output: [
     {
       file: pkg.main,
       format: "cjs",
       exports: "named",
-      sourcemap: true
     },
     {
       file: pkg.module,
       format: "es",
       exports: "named",
-      sourcemap: true
     }
   ],
   plugins: [
@@ -28,7 +26,7 @@ export default {
     nodeResolve(),
     typescript({
       typescript: require('typescript'),
-      useTsconfigDeclarationDir: true 
+      rollupCommonJSResolveHack: false,
     }),
     commonjs(),
     scss()
