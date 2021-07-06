@@ -1,6 +1,6 @@
 {
   "name": "delicious-components",
-  "version": "0.1.2",
+  "version": "0.1.5",
   "main": "build/index.js",
   "module": "build/index.es.js",
   "jsnext:main": "build/index.es.js",
