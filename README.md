@@ -1,46 +1,75 @@
-# Getting Started with Create React App
+# Delicious Components
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Created this project to create reusable components that will be used across delicious-basket project.
+You can find delicious recipe project at:
+https://github.com/vinodhkumar-k/delicious-basket
 
-## Available Scripts
+## COMPONENTS
 
-In the project directory, you can run:
+These components are based on the styled-system specification and rendered using styled-components.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Box
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The Box component serves as a wrapper component for layout related needs. Use Box to set values such as display, width, height, and more. In practice, this component is used as a wrapper around other components to achieve Box Model related styling.
 
-### `npm test`
+This component uses the following functions from the styled-system: background, border, color, flexbox, layout, position, shadow, and space.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### Button
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The Button component can use two different variants; primary and secondary, that can be manipulated through the variant property.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This component uses the following functions from styled-system: layout, space.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Flex
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The Flex component behaves the same as the Box component except that it has display: flex set by default.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Grid
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Grid is implemented through the styled-bootstrap-grid [https://github.com/dragma/styled-bootstrap-grid](https://github.com/dragma/styled-bootstrap-grid)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### List
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The List component renders a ul element with list-style-type: none set by default.
+
+This component uses the following functions from styled-system: layout, space.
+
+
+### ListItem
+
+The ListItem component renders a li element, and it's recommended to be used as the children of the List component.
+
+
+### Text
+
+The Text component is a wrapper component that will apply typography styles to the text inside. It renders a div element as default, but using the ["as" polyphormic property from the styled-components specification](https://styled-components.com/docs/api#as-polymorphic-prop) can render any text element, such as p, h1, span, etc.
+
+
+## USAGE
+
+
+### npm install
+
+npm i delicious-components
+
+
+### CommonJS
+
+Example:
+const Components = require('delicious-components');
+
+const Box = Components.Box;
+<Box color={'Green'}>Hello Delicious Basket</Box>
+
+
+### ES6
+
+Example:
+// @ts-ignore
+import { Box } from 'delicious-components';
+<Box color={'Red'}>Hello Delicious Basket</Box>
